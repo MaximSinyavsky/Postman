@@ -1,4 +1,4 @@
-# Postman homeworks
+# Postman tasks
 
 1. [Task for homework №1](https://docs.google.com/document/d/13-GeVhMA_mIrufWhsBIgd5jFoF6YASpi1-mgg_AmV2U/edit?usp=share_link)
 2. [Task for homework №2](https://docs.google.com/document/d/146JdxjxY38owQwsl2BN5F2nLmJqn-PjUy_BDWMNPkII/edit?usp=share_link)
