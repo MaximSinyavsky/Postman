@@ -144,7 +144,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"age\": {{age}},\r\n    \"salary\": {{salary}},\r\n    \"name\": \"{{name}}\",\r\n    \"auth_token\": \"{{token}}\"\r\n}",
+					"raw": "{\r\n    \"age\": 33,\r\n    \"salary\": 1500,\r\n    \"name\": \"Maxim\",\r\n    \"auth_token\": \"{{token}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -225,17 +225,17 @@
 					"formdata": [
 						{
 							"key": "age",
-							"value": "{{age}}",
+							"value": "33",
 							"type": "text"
 						},
 						{
 							"key": "salary",
-							"value": "{{salary}}",
+							"value": "1500",
 							"type": "text"
 						},
 						{
 							"key": "name",
-							"value": "{{name}}",
+							"value": "Maxim",
 							"type": "text"
 						},
 						{
