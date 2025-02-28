@@ -36,7 +36,6 @@ jobs:
           npm install -g newman@latest
           npm install -g newman-reporter-allure
           npm install -g allure-commandline
-          npm install -g newman-reporter-html
       
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -45,17 +44,17 @@ jobs:
       - name: Run Postman Collection #1
         id: run_my_test_collection_1
         run: |
-         newman run homework-#1.postman_collection.json
+         newman run homework-#1.postman_collection.json -r allure
         continue-on-error: true
       
       - name: Run Postman Collection #2
         id: run_my_test_collection_2
         run: |
-         newman run homework-#2.postman_collection.json -e homework-#2.postman_environment.json -r allure
+         newman run homework-#2.postman_collection.json -e homework-#2.postman_environment.json --verbose
         continue-on-error: true
       
       - name: Run Postman Collection #3
         id: run_my_test_collection_3
         run: |
-         newman run homework-#3.postman_collection.json -e homework-#2.postman_environment.json -r html
+         newman run homework-#3.postman_collection.json -e homework-#2.postman_environment.json --verbose
         continue-on-error: true
