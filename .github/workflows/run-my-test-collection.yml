@@ -33,9 +33,9 @@ jobs:
 
       - name: Install Newman and allure report
         run: |
-          npm install -g newman@latest
-          npm install -g newman-reporter-allure
-          npm install -g allure-commandline
+         npm install -g newman
+         npm install -g newman-reporter-allure
+         npm install -g allure-commandline
       
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -44,7 +44,7 @@ jobs:
       - name: Run Postman Collection #1
         id: run_my_test_collection_1
         run: |
-         newman run homework-#1.postman_collection.json --verbose
+         newman run homework-#1.postman_collection.json --verbose -r allure
         continue-on-error: true
       
       - name: Run Postman Collection #2
@@ -59,17 +59,8 @@ jobs:
          newman run homework-#3.postman_collection.json -e homework-#3.postman_environment.json --verbose
         continue-on-error: true
 
-      - name: Setup Allure History
-        uses: actions/checkout@v4.2.2
-        if: always()
-        continue-on-error: true
+      - name: Upload Newman Report
+        uses: actions/upload-artifact@v2
         with:
-          ref: gh-pages
-          path: gh-pages
-
-      - name: Generate Allure Report
-        uses: simple-elf/allure-report-action@v1.11
-        if: always()
-        with:
-          allure_results: allure-results
-          allure_history: allure-history
+         name: newman-report
+         path: newman-report.json
