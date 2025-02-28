@@ -44,7 +44,7 @@ jobs:
       - name: Run Postman Collection #1
         id: run_my_test_collection_1
         run: |
-         newman run homework-#1.postman_collection.json -r allure
+         newman run homework-#1.postman_collection.json --verbose
         continue-on-error: true
       
       - name: Run Postman Collection #2
