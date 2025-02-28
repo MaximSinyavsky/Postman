@@ -41,6 +41,16 @@ jobs:
         run: echo Hello, world!
         
       - name: Run Postman Collection #1
-        id: run_my_test_collection
+        id: run_my_test_collection_1
         run: |
          newman run homework-#1.postman_collection.json
+      
+      - name: Run Postman Collection #2
+        id: run_my_test_collection_2
+        run: |
+         newman run homework-#2.postman_collection.json -e homework-#2.postman_environment.json
+      
+      - name: Run Postman Collection #3
+        id: run_my_test_collection_3
+        run: |
+         newman run homework-#3.postman_collection.json -e homework-#2.postman_environment.json
