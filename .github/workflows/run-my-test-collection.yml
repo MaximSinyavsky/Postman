@@ -31,9 +31,10 @@ jobs:
         with:
           node-version: '18.16.0'
 
-      - name: Install Newman and dependencies
+      - name: Install Newman and allure report
         run: |
           npm install -g newman@latest
+          npm install -g newman-reporter-allure
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
