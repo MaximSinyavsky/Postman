@@ -100,12 +100,12 @@
 						},
 						{
 							"key": "age",
-							"value": "32",
+							"value": "33",
 							"type": "text"
 						},
 						{
 							"key": "salary",
-							"value": "100500",
+							"value": "1500",
 							"type": "text"
 						}
 					]
@@ -176,7 +176,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}:{{port}}/object_info_3?name=Maxim&age=32&salary=100500",
+					"raw": "{{url}}:{{port}}/object_info_3?name=Maxim&age=33&salary=1500",
 					"host": [
 						"{{url}}"
 					],
@@ -191,11 +191,11 @@
 						},
 						{
 							"key": "age",
-							"value": "32"
+							"value": "33"
 						},
 						{
 							"key": "salary",
-							"value": "100500"
+							"value": "1500"
 						}
 					]
 				}
@@ -251,15 +251,15 @@
 							"// 17. Создать в окружении переменную salary\r",
 							"pm.environment.set(\"salary\");\r",
 							"// 18. Передать в окружение переменную name\r",
-							"pm.environment.set(\"name\", responseData.name);\r",
+							"pm.environment.set(\"name\", requestData.name);\r",
 							"// 19. Передать в окружение переменную age\r",
-							"pm.environment.set(\"age\", responseData.age);\r",
+							"pm.environment.set(\"age\", requestData.age);\r",
 							"// 20. Передать в окружение переменную salary\r",
-							"pm.environment.set(\"salary\", responseData.salary);\r",
+							"pm.environment.set(\"salary\", requestData.salary);\r",
 							"// 21. Написать цикл который выведет в консоль по порядку элементы списка из параметра salary.\r",
 							"for (i in responseData.salary){\r",
 							"    console.log(responseData.salary[i])\r",
-							"}"
+							"};"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -270,7 +270,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}:{{port}}/object_info_4?name=Maxim&age=32&salary=100500",
+					"raw": "{{url}}:{{port}}/object_info_4?name=Maxim&age=33&salary=1500",
 					"host": [
 						"{{url}}"
 					],
@@ -285,11 +285,11 @@
 						},
 						{
 							"key": "age",
-							"value": "32"
+							"value": "33"
 						},
 						{
 							"key": "salary",
-							"value": "100500"
+							"value": "1500"
 						}
 					]
 				}
@@ -406,19 +406,13 @@
 						},
 						{
 							"key": "age",
-							"value": "32",
+							"value": "33",
 							"type": "text"
 						},
 						{
 							"key": "salary",
-							"value": "100500",
+							"value": "1500",
 							"type": "text"
-						},
-						{
-							"key": "",
-							"value": "",
-							"type": "text",
-							"disabled": true
 						}
 					]
 				},
@@ -459,37 +453,6 @@
 					"});"
 				]
 			}
-		}
-	],
-	"variable": [
-		{
-			"key": "url",
-			"value": "http://162.55.220.72",
-			"type": "string"
-		},
-		{
-			"key": "port",
-			"value": "5005",
-			"type": "string"
-		},
-		{
-			"key": "name",
-			"value": "Maxim",
-			"type": "string"
-		},
-		{
-			"key": "age",
-			"value": "32",
-			"type": "string"
-		},
-		{
-			"key": "salary",
-			"value": "100500",
-			"type": "string"
-		},
-		{
-			"key": "body",
-			"value": ""
 		}
 	]
 }

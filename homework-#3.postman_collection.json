@@ -19,6 +19,13 @@
 						"type": "text/javascript",
 						"packages": {}
 					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript"
+					}
 				}
 			],
 			"request": {
@@ -29,7 +36,7 @@
 					"formdata": [
 						{
 							"key": "login",
-							"value": "Maxim1",
+							"value": "Maxim",
 							"type": "text"
 						},
 						{
@@ -40,13 +47,9 @@
 					]
 				},
 				"url": {
-					"raw": "http://162.55.220.72:{{port}}/login",
-					"protocol": "http",
+					"raw": "{{url}}:{{port}}/login",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -149,13 +152,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://162.55.220.72:{{port}}/user_info",
-					"protocol": "http",
+					"raw": "{{url}}:{{port}}/user_info",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -247,13 +246,9 @@
 					]
 				},
 				"url": {
-					"raw": "http://162.55.220.72:{{port}}/new_data",
-					"protocol": "http",
+					"raw": "{{url}}:{{port}}/new_data",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -341,13 +336,9 @@
 					]
 				},
 				"url": {
-					"raw": "http://162.55.220.72:{{port}}/test_pet_info",
-					"protocol": "http",
+					"raw": "{{url}}:{{port}}/test_pet_info",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
 					"port": "{{port}}",
 					"path": [
@@ -448,100 +439,13 @@
 					]
 				},
 				"url": {
-					"raw": "http://162.55.220.72:{{port}}/get_test_user",
-					"protocol": "http",
+					"raw": "{{url}}:{{port}}/get_test_user",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
 					"port": "{{port}}",
 					"path": [
 						"get_test_user"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "EP#6",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"// 1) Можете взять любой объект из присланного списка, используйте js random.\r",
-							"// В объекте возьмите Cur_ID и передать через окружение в следующий запрос.\r",
-							""
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "auth_token",
-							"value": "{{token}}",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://162.55.220.72:{{port}}/currency",
-					"protocol": "http",
-					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
-					],
-					"port": "{{port}}",
-					"path": [
-						"currency"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "EP#7",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "auth_token",
-							"value": " {{token}}",
-							"type": "text"
-						},
-						{
-							"key": "curr_code",
-							"value": "{{Cur_ID}}",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://162.55.220.72:5006/curr_byn",
-					"protocol": "http",
-					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
-					],
-					"port": "5006",
-					"path": [
-						"curr_byn"
 					]
 				}
 			},
