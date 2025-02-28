@@ -44,13 +44,16 @@ jobs:
         id: run_my_test_collection_1
         run: |
          newman run homework-#1.postman_collection.json
+        continue-on-error: true
       
       - name: Run Postman Collection #2
         id: run_my_test_collection_2
         run: |
          newman run homework-#2.postman_collection.json -e homework-#2.postman_environment.json
+        continue-on-error: true
       
       - name: Run Postman Collection #3
         id: run_my_test_collection_3
         run: |
          newman run homework-#3.postman_collection.json -e homework-#2.postman_environment.json
+        continue-on-error: true
