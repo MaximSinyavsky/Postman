@@ -58,3 +58,18 @@ jobs:
         run: |
          newman run homework-#3.postman_collection.json -e homework-#3.postman_environment.json --verbose
         continue-on-error: true
+
+      - name: Setup Allure History
+        uses: actions/checkout@v4.2.2
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Generate Allure Report
+        uses: simple-elf/allure-report-action@v1.11
+        if: always()
+        with:
+          allure_results: allure-results
+          allure_history: allure-history
