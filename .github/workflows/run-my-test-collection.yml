@@ -56,5 +56,5 @@ jobs:
       - name: Run Postman Collection #3
         id: run_my_test_collection_3
         run: |
-         newman run homework-#3.postman_collection.json -e homework-#2.postman_environment.json --verbose
+         newman run homework-#3.postman_collection.json -e homework-#3.postman_environment.json --verbose
         continue-on-error: true
